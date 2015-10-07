@@ -1,7 +1,7 @@
-var loader = require('node-remote-config-loader');
-var log = require('./log');
+var loader = require("node-remote-config-loader");
+var log = require("./log");
 
-process.env.node_env = process.env.node_env || 'development';
+process.env.node_env = process.env.node_env || "development";
 process.env.config_version = process.env.config_version || 20150920;
 
 var DEVENV = (process.env.node_env === "development" || process.env.node_env === "test");
@@ -23,14 +23,14 @@ var config = loader.load({
 
 module.exports = {
 
-  host: '127.0.0.1',
-  port: '8000',
+  host: "127.0.0.1",
+  port: "8000",
 
   cache: {
     enabled: false,
     //should has element with same name contain configuration used with same file name under
     // caching directory(./caching) and implement methods in ./caching/index.js
-    cacheModule: 'redis',
+    cacheModule: "redis",
     redis: config.cache.redis
   }
 };

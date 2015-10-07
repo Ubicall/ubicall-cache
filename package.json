@@ -1,0 +1,47 @@
+{
+  "name": "ubicall-cache",
+  "version": "1.0.0",
+  "description": "Middleware for ubicall web service caching and publish updates to ubicall clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js-beautify": "node_modules/.bin/js-beautify -r **/*.js",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+    "git-add": "git add --all"
+  },
+  "pre-commit": [
+    "js-beautify",
+    "git-add"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ubicall/ubicall-cache.git"
+  },
+  "keywords": [
+    "ubicall",
+    "cache"
+  ],
+  "author": "waleed_samy@ymail.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/waleedsamy/ubicall-cache/issues"
+  },
+  "homepage": "https://github.com/waleedsamy/ubicall-cache#readme",
+  "devDependencies": {
+    "js-beautify": "^1.5.10",
+    "jshint": "^2.8.0",
+    "pre-commit": "^1.1.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "passport": "^0.3.0",
+    "redis": "^2.1.0",
+    "when": "^3.7.3",
+    "node-remote-config-loader": "git://github.com/Ubicall/node-remote-config-loader.git",
+    "ubicall-oauth": "git://github.com/Ubicall/ubicall-oauth.git"
+  },
+  "optionalDependencies": {
+    "hiredis": "^0.4.1",
+    "redis": "^2.1.0"
+  }
+}
